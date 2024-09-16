@@ -2,14 +2,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editable Resume Builder</title>
+    <title>Shareable Resume Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Editable Resume Builder</h1>
+    <h1>Shareable Resume Builder</h1>
     <form id="resume-sorm">
     <fieldset>
         <legend>Personal Information</legend>
+
+        <label for="username"></label>
+        <label type="text" id="username" placeholder="Enter your username" required></label>
+
         <label for="name"></label>Name:</label>
         <input type="text" id="name" placeholder="Enter your name" required>
 
@@ -46,6 +50,14 @@
 <div id="resume-display" contenteditable="true">
     <!--resume will be generated bellow-->
 </div>
+
+<!--section for the shareable link and download option-->
+<div id="shareable-link-container" style="display: none;"></div>
+<h2>shareable-link</h2>
+<p>Here is your unique link to view or edit your resume:</p>
+<a href="#" id="shareable-link" target="_blank"></a>
+<br>
+<button id="download-pdf"><b>Download as PDF</b> </button>
 
 <script src="script.js"></script>
 
